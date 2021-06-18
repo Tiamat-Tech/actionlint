@@ -7,6 +7,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
+      fail-fast: FALSE
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -26,3 +27,12 @@ jobs:
       - name: Add staticcheck to PATH
         run: echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
       - run: staticcheck ./...
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'true'
+        if: false || true
+      - run: echo 'true2'
+        if: true && true
+      - run: echo 'false'
+        if: true && false
