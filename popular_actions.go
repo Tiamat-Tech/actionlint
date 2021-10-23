@@ -868,6 +868,7 @@ var PopularActions = map[string]*ActionMetadata{
 		Name: "Download workflow artifact",
 		Inputs: map[string]ActionMetadataInputRequired{
 			"branch":              false,
+			"check_artifacts":     false,
 			"commit":              false,
 			"event":               false,
 			"github_token":        false,
@@ -926,6 +927,7 @@ var PopularActions = map[string]*ActionMetadata{
 			"from":             true,
 			"html_body":        false,
 			"ignore_cert":      false,
+			"in_reply_to":      false,
 			"password":         false,
 			"priority":         false,
 			"reply_to":         false,
@@ -1860,7 +1862,7 @@ var PopularActions = map[string]*ActionMetadata{
 		Inputs: map[string]ActionMetadataInputRequired{
 			"fail_on_error":      false,
 			"filter_mode":        false,
-			"github_token":       true,
+			"github_token":       false,
 			"level":              false,
 			"reporter":           false,
 			"reviewdog_flags":    false,
