@@ -103,6 +103,7 @@ var PopularActions = map[string]*ActionMetadata{
 			"seconds_between_github_reads":     false,
 			"seconds_between_github_writes":    false,
 			"test_changes_limit":               false,
+			"time_unit":                        false,
 		},
 	},
 	"JamesIves/github-pages-deploy-action@releases/v3": {
@@ -180,6 +181,7 @@ var PopularActions = map[string]*ActionMetadata{
 			"disable-spellchecker":   false,
 			"emulator-build":         false,
 			"emulator-options":       false,
+			"enable-hw-keyboard":     false,
 			"force-avd-creation":     false,
 			"ndk":                    false,
 			"profile":                false,
@@ -600,6 +602,7 @@ var PopularActions = map[string]*ActionMetadata{
 			"cache-dependency-path": false,
 			"check-latest":          false,
 			"node-version":          false,
+			"node-version-file":     false,
 			"registry-url":          false,
 			"scope":                 false,
 			"token":                 false,
@@ -742,6 +745,7 @@ var PopularActions = map[string]*ActionMetadata{
 			"exempt-all-pr-assignees":         false,
 			"exempt-all-pr-milestones":        false,
 			"exempt-assignees":                false,
+			"exempt-draft-pr":                 false,
 			"exempt-issue-assignees":          false,
 			"exempt-issue-labels":             false,
 			"exempt-issue-milestones":         false,
@@ -749,6 +753,11 @@ var PopularActions = map[string]*ActionMetadata{
 			"exempt-pr-assignees":             false,
 			"exempt-pr-labels":                false,
 			"exempt-pr-milestones":            false,
+			"ignore-issue-updates":            false,
+			"ignore-pr-updates":               false,
+			"ignore-updates":                  false,
+			"labels-to-add-when-unstale":      false,
+			"labels-to-remove-when-unstale":   false,
 			"only-issue-labels":               false,
 			"only-labels":                     false,
 			"only-pr-labels":                  false,
@@ -1091,6 +1100,7 @@ var PopularActions = map[string]*ActionMetadata{
 	"docker/login-action@v1": {
 		Name: "Docker Login",
 		Inputs: map[string]ActionMetadataInputRequired{
+			"ecr":      false,
 			"logout":   false,
 			"password": false,
 			"registry": false,
@@ -1523,6 +1533,7 @@ var PopularActions = map[string]*ActionMetadata{
 	"mikepenz/release-changelog-builder-action@v2": {
 		Name: "Release Changelog Builder",
 		Inputs: map[string]ActionMetadataInputRequired{
+			"baseUrl":           false,
 			"commitMode":        false,
 			"configuration":     false,
 			"failOnError":       false,
@@ -1738,6 +1749,7 @@ var PopularActions = map[string]*ActionMetadata{
 	"peter-evans/create-pull-request@v3": {
 		Name: "Create Pull Request",
 		Inputs: map[string]ActionMetadataInputRequired{
+			"add-paths":      false,
 			"assignees":      false,
 			"author":         false,
 			"base":           false,
@@ -1815,6 +1827,7 @@ var PopularActions = map[string]*ActionMetadata{
 			"filter_mode":     false,
 			"github_token":    false,
 			"level":           false,
+			"node_options":    false,
 			"reporter":        false,
 			"reviewdog_flags": false,
 			"tool_name":       false,
