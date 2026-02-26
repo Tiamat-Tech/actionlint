@@ -24,7 +24,7 @@ jobs:
           check-latest: true
       - name: Get version
         run: echo VERSION="${GITHUB_REF#refs/tags/v}" >> "$GITHUB_ENV"
-      - uses: goreleaser/goreleaser-action@v6
+      - uses: goreleaser/goreleaser-action@v7
         with:
           version: '~> v2'
           args: release --clean
