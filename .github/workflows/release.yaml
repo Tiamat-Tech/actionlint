@@ -30,7 +30,7 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/attest-build-provenance@v3
+      - uses: actions/attest-build-provenance@v4
         with:
           subject-checksums: ${{ format('./dist/actionlint_{0}_checksums.txt', env.VERSION) }}
       - name: Post-release download check
